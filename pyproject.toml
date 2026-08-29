@@ -1,0 +1,25 @@
+[project]
+name = "bank-customer-churn-mlops"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "huggingface-hub>=1.29.0",
+    "joblib>=1.5.3",
+    "pandas>=3.0.5",
+    "scikit-learn>=1.9.0",
+    "streamlit>=1.62.0",
+    "xgboost>=3.4.1",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+# Use a src layout so packages are discovered under the `src/` directory.
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
